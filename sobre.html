@@ -1,54 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+<meta charset="UTF-8">
+<title>Sobre - Skull Gym</title>
 <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-<nav>
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+    
     <div class="logo">
-        <img src="skullgym/logo.png" alt="Logo">
-        <span>Skull Gym</span>
+      <img src="skullgym/logo.png" alt="Logo">
+      <span>Skull Gym</span>
     </div>
 
-    <div class="menu">
-        <a href="index.html">Início</a>
-        <a href="planos.html">Planos</a>
-        
-        <a href="contato.html">Contato</a>
-        <a href="depoimentos.html">Feedback</a>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <div class="menu" id="menu">
+      <a href="index.html">Início</a>
+      <a href="planos.html">Planos</a>
+      <a href="depoimentos.html">Feedback</a>
+      <a href="contato.html">Contato</a>
+      <a href="sobre.html">Sobre</a>
     </div>
-</nav>
 
-<div class="fundo" >
-<div class="overlay">
-<h1>Sobre a Skull Gym</h1>
-</div>
-<div class="section content">
-<p>
-A Skull Gym nasceu com o propósito de oferecer muito mais do que treino. Aqui, cada aluno recebe atenção personalizada, ambiente motivador e estrutura de alto nível.
-</p>
+  </nav>
+</header>
 
-<p>
-Nosso diferencial está no cuidado com cada detalhe: equipamentos modernos da Iron Tech, suporte constante e um espaço pensado para gerar resultados reais.
-</p>
+<!-- CONTEÚDO -->
+<main>
 
-<p>
-Seja você iniciante ou avançado, aqui é o lugar para evoluir e transformar seu estilo de vida.
-</p>
-</div>
-</div>
+<section class="section2">
+    <!-- HISTÓRIA -->
+<section class="section">
+    <h2>Sobre a Skull Gym</h2>
 
+    <div class="card" style="max-width: 800px; margin: auto;">
+        <p>
+            A <strong>Skull Gym</strong> nasceu com um propósito claro: transformar vidas através do treino.
+            Mais do que uma academia, somos um espaço onde disciplina, evolução e resultados caminham juntos.
+        </p>
+
+        <p>
+            Desde o início, nosso foco sempre foi oferecer um ambiente motivador, com estrutura de qualidade
+            e acompanhamento próximo, para que cada aluno consiga alcançar seus objetivos — seja ganhar massa,
+            emagrecer ou melhorar sua qualidade de vida.
+        </p>
+
+        <p>
+            Aqui, acreditamos que consistência e orientação correta fazem toda a diferença.
+            Por isso, trabalhamos com profissionais capacitados e um atendimento diferenciado,
+            sempre buscando entregar resultados reais.
+        </p>
+    </div>
+</section>
+
+<!-- MISSÃO / VISÃO / VALORES -->
+<section class="section">
+    <h2>Nossos Princípios</h2>
+
+    <div class="cards">
+
+        <!-- MISSÃO -->
+        <div class="card" id="cardDestaque">
+            <h3>🎯 Missão</h3>
+            <p>
+                Proporcionar um ambiente de treino completo e motivador, oferecendo suporte profissional
+                para que cada aluno alcance sua melhor versão.
+            </p>
+        </div>
+
+        <!-- VISÃO -->
+        <div class="card" id="cardDestaque">
+            <h3>🚀 Visão</h3>
+            <p>
+                Ser referência na região como uma academia que entrega resultados reais,
+                inovação e excelência no atendimento.
+            </p>
+        </div>
+
+        <!-- VALORES -->
+        <div class="card" id="cardDestaque">
+            <h3>💪 Valores</h3>
+            <p>• Disciplina e constância</p>
+            <p>• Compromisso com resultados</p>
+            <p>• Respeito e inclusão</p>
+            <p>• Qualidade no atendimento</p>
+        </div>
+
+    </div>
+</section>
+</section>
+
+</main>
+
+<!-- FOOTER -->
 <footer>
 <p>© Skull Gym - Todos os direitos reservados</p>
 </footer>
 
+<!-- WHATSAPP -->
 <a class="whatsapp"
 href="https://wa.me/5528999166566?text=Quero saber mais">
 💬
 </a>
 
+<!-- SCRIPT MENU -->
+<script>
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+</script>
 
 </body>
 </html>

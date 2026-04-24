@@ -1,73 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+<meta charset="UTF-8">
+<title>Planos - Skull Gym</title>
 <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-<nav>
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+    
     <div class="logo">
-        <img src="skullgym/logo.png" alt="Logo">
-        <span>Skull Gym</span>
+      <img src="skullgym/logo.png" alt="Logo">
+      <span>Skull Gym</span>
     </div>
 
-    <div class="menu">
-        <a href="index.html">Início</a>
-        
-        <a href="contato.html">Contato</a>
-        <a href="depoimentos.html">Feedback</a>
-        <a href="sobre.html">Sobre</a>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <div class="menu" id="menu">
+      <a href="index.html">Início</a>
+      <a href="planos.html">Planos</a>
+      <a href="depoimentos.html">Feedback</a>
+      <a href="contato.html">Contato</a>
+      <a href="sobre.html">Sobre</a>
     </div>
-</nav>
 
-<div class="fundo" >
-<div class="overlay">
-<h1>Nossos Planos</h1>
-</div>
-<div class="section content">
-<p>
-Na Skull Gym você encontra planos pensados para todos os objetivos, desde quem está começando até quem busca alta performance.
-</p>
-</div>
-<div class="section">
-<div class="cards">
+  </nav>
+</header>
 
-<div class="card">
-<h3>Plano Mensal</h3>
-<p>R$ 99</p>
-<p>Acesso completo + acompanhamento</p>
+<!-- CONTEÚDO -->
+<main>
 
-<a class="btn"
-href="https://wa.me/5528999166566?text=Quero o plano mensal">
-Escolho esse
-</a>
-</div>
+<section class="fundo">
+    <h2>Nossos Planos</h2>
 
-<div class="card">
-<h3>Plano com Nutricionista</h3>
-<p>R$ 149</p>
-<p>Treino + acompanhamento alimentar</p>
+    <div class="cards">
 
-<a class="btn"
-href="https://wa.me/5528999166566?text=Quero o plano com nutricionista">
-Escolho esse
-</a>
-</div>
+        <div class="card">
+            <h3>Plano Básico</h3>
+            <p>✔ Acesso à academia</p>
+            <p>✔ Horário livre</p>
+            <p>✔ Equipamentos completos</p>
+            <h2>R$ 79/mês</h2>
+            <a class="btn" href="https://wa.me/5528999166566?text=Quero o plano básico">Escolher</a>
+        </div>
 
-</div>
-</div>
-</div>
+        <div class="card">
+            <h3>Plano Intermediário</h3>
+            <p>✔ Tudo do plano básico</p>
+            <p>✔ Acompanhamento básico</p>
+            <p>✔ Avaliação física</p>
+            <h2>R$ 109/mês</h2>
+            <a class="btn" href="https://wa.me/5528999166566?text=Quero o plano intermediário">Escolher</a>
+        </div>
 
+        <div class="card" id="cardDestaque">
+            <h3>Plano Premium</h3>
+            <p>✔ Tudo do intermediário</p>
+            <p>✔ Personal trainer</p>
+            <p>✔ Nutricionista</p>
+            <h2>R$ 149/mês</h2>
+            <a class="btn" href="https://wa.me/5528999166566?text=Quero o plano premium">Escolher</a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
 <footer>
 <p>© Skull Gym - Todos os direitos reservados</p>
 </footer>
 
+<!-- WHATSAPP -->
 <a class="whatsapp"
 href="https://wa.me/5528999166566?text=Quero saber mais">
 💬
 </a>
 
+<!-- SCRIPT MENU -->
+<script>
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+</script>
 
 </body>
 </html>

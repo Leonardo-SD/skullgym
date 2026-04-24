@@ -1,52 +1,112 @@
-body {
+/* RESET */
+* {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0b0b0b;
-    color: #fff;
-   
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    padding-top: 80px; /* IMPORTANTE: evita sobreposição do menu */
 }
 
 /* NAVBAR */
-nav {
-    background: rgba(0,0,0,0.95);
-    padding: 15px;
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
+    z-index: 1000;
 }
 
-/* LOGO */
 .logo {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .logo img {
-    height: 50px;
-    margin-right: 10px;
+    width: 40px;
 }
 
-.logo span {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #ffffff;
+.menu {
+    display: flex;
+    gap: 20px;
 }
 
-/* MENU */
 .menu a {
-    color: #fff;
-    margin-left: 10px;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
     transition: 0.3s;
 }
 
 .menu a:hover {
-    color: #ff0000;
+    color: red;
+}
+
+/* BOTÃO HAMBURGUER */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 /* HERO */
-header {
+.fundo {
+      background: linear-gradient(rgba(0, 0, 0, 0.844), rgba(47, 1, 1, 0.26)),
+    url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61') center/cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    min-height: 920px;
+
+    
+}
+
+.fundo h1 {
+    font-size: 2.5rem;
+}
+
+.fundo span {
+    color: red;
+}
+
+.fundo p {
+    margin: 15px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: darkred;
+}
+
+/* SEÇÕES */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+  
+    
+}
+
+.section2 {
     background: linear-gradient(rgba(0, 0, 0, 0.844), rgba(47, 1, 1, 0.26)),
     url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61') center/cover;
     height: 90vh;
@@ -55,11 +115,11 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center; 
-    min-height: 920px;
+    min-height: 1400px;
 }
 
-.fundo{
-     background: linear-gradient(rgba(0, 0, 0, 0.844), rgba(47, 1, 1, 0.26)),
+.section3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.844), rgba(47, 1, 1, 0.26)),
     url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61') center/cover;
     height: 90vh;
     display: flex;
@@ -67,169 +127,170 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center; 
-    min-height: 920px;
-    
-}
-
-header h1 {
-   
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    color: #fff;
-}
-
-header span {
-    color: #ff0000;
-}
-
-header p {
-    margin: 15px 0;
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-}
-
-/* BOTÃO */
-.btn {
-    background: #ff0000;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.1);
-}
-
-/* SEÇÕES */
-.section {
-    
-    padding: 70px 20px;
-    text-align: center;
-}
-
-.section h2 {
-    color: #ffffff;
+    min-height: 1100px;
 }
 
 /* CARDS */
 .cards {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .card {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 25px;
-    border-radius: 15px;
-    width: 260px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    background: #00000045;
+    padding: 20px;
+    border-radius: 10px;
     transition: 0.3s;
-    border: 1px solid #ff0000;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.05);
 }
 
-/* WHATSAPP */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #ff0000;
-    padding: 18px;
-    border-radius: 50%;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+/* DEPOIMENTOS */
+.depoimentosCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
-/* FOOTER */
-footer {
-    background: #0000003b;
-    padding: 20px;
-    text-align: center;
-   
-    
+.depoimentosCard {
+    flex: 1 1 260px;
+    max-width: 300px;
+    width: 260px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid red;
+    margin: auto;
 }
 
-
-@media (max-width: 768px) {
-
-   
-
-    .menu {
-        display: block;
-        
-        gap: 10px;
-    }
-
-    .header h1 {
-        font-size: 2rem;
-    }
-
-    .header p {
-        font-size: 1rem;
-    }
-
-    .section {
-        padding: 50px 15px;
-    }
-
+.depoimentosCard p {
+    font-style: italic;
 }
 
-/* IMAGEM ANTES/DEPOIS */
+/* ESTRELAS */
+.stars {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+/* ANTES E DEPOIS */
 .before-after {
     
-    gap: 8px;
+    gap: 10px;
     justify-content: center;
 }
 
 .before-after img {
     width: 100%;
-    max-width: 45%;
+    max-width: 48%;
     height: 140px;
-    object-fit: cover;
     border-radius: 8px;
+    transition: 0.3s;
 }
 
 .before-after img:hover {
     transform: scale(1.05);
-    transition: 0.3s;
 }
-/* ESTRELAS */
-.stars {
-    color: gold;
+
+/* WHATSAPP FLOAT */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    font-size: 24px;
+    padding: 12px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVO */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: black;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 20px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .fundo h1 {
+        font-size: 1.8rem;
+    }
+
+    .before-after {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .before-after img {
+        max-width: 40%;
+    }
+}
+
+#cardDestaque {
+    border: 2px solid red;
+    
+}
+
+#cardDestaque:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px red;
+}
+
+.card h3 {
     margin-bottom: 10px;
-    font-size: 1.2rem;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.section .card {
+    line-height: 1.6;
 }
 
 .depoimentosCard {
-   
-        background: rgba(0, 0, 0, 0.5);
-    padding: 25px;
-    border-radius: 15px;
-    width: 260px;
-    transition: 0.3s;
-    border: 1px solid #ff0000;
-    max-width: 300px;
-    margin: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.depoimentosCards {
-
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    
-                                        
+.depoimentosCard {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* CARD DEPOIMENTO */
-.depoimentosCard p {
-    font-style: italic;
+ .depoimentosCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px red;
 }
 

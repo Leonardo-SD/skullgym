@@ -1,91 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+<meta charset="UTF-8">
+<title>Feedback - Skull Gym</title>
 <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-<nav>
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+    
     <div class="logo">
-        <img src="skullgym/logo.png" alt="Logo">
-        <span>Skull Gym</span>
+      <img src="skullgym/logo.png" alt="Logo">
+      <span>Skull Gym</span>
     </div>
 
-    <div class="menu">
-        <a href="index.html">Início</a>
-        <a href="planos.html">Planos</a>
-        <a href="contato.html">Contato</a>
-        <a href="sobre.html">Sobre</a>
-        
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <div class="menu" id="menu">
+      <a href="index.html">Início</a>
+      <a href="planos.html">Planos</a>
+      <a href="depoimentos.html">Feedback</a>
+      <a href="contato.html">Contato</a>
+      <a href="sobre.html">Sobre</a>
     </div>
-</nav>
 
-<div class="fundo">
-<div class="overlay">
-    <h1 >Resultados Reais</h1>
-</div>
+  </nav>
+</header>
 
+<!-- CONTEÚDO -->
+<main>
 
+<section class="section3">
+    <h2>Resultados e Feedback</h2>
 
-<div class="section">
-<div class="depoimentosCards">
+    <div class="depoimentosCards">
 
-<!-- DEPOIMENTO 1 -->
-<div class="depoimentosCard">
+        <!-- CARD 1 -->
+        <div class="depoimentosCard">
+            <div class="before-after">
+                <img src="skullgym/antes1.jpg" alt="Antes">
+                <img src="skullgym/depois1.jpg" alt="Depois">
+            </div>
 
-<div class="before-after">
-<img src="skullgym/49107978-gordo-desleixado-homem-desenho-animado-desenhando-vetor.jpg">
-<img src="skullgym/85934449-happy-slim-man-loose-weight-in-flat-cartoon-illustration.jpg">
-</div>
+            <div class="stars">★★★★★</div>
 
-<div class="stars">★★★★★</div>
+            <p>"Em 3 meses já tive resultados incríveis! Melhor academia da região."</p>
+            <strong>- João</strong>
+        </div>
 
-<p>"Perdi 8kg em 2 meses, melhor decisão da minha vida!"</p>
+        <!-- CARD 2 -->
+        <div class="depoimentosCard">
+            <div class="before-after">
+                <img src="skullgym/antes1.jpg" alt="Antes">
+                <img src="skullgym/depois1.jpg" alt="Depois">
+            </div>
 
-</div>
+            <div class="stars">★★★★★</div>
 
-<!-- DEPOIMENTO 2 -->
-<div class="depoimentosCard">
+            <p>"Atendimento top e acompanhamento de verdade. Recomendo demais!"</p>
+            <strong>- Maria</strong>
+        </div>
 
-<div class="before-after">
-<img src="skullgym/49107978-gordo-desleixado-homem-desenho-animado-desenhando-vetor.jpg">
-<img src="skullgym/85934449-happy-slim-man-loose-weight-in-flat-cartoon-illustration.jpg">
-</div>
+        <!-- CARD 3 -->
+        <div class="depoimentosCard">
+            <div class="before-after">
+                <img src="skullgym/antes1.jpg" alt="Antes">
+                <img src="skullgym/depois1.jpg" alt="Depois">
+            </div>
 
-<div class="stars">★★★★★</div>
+            <div class="stars">★★★★★</div>
 
-<p>"Ambiente incrível e profissionais muito atenciosos."</p>
+            <p>"Nunca consegui manter rotina antes. Aqui foi diferente."</p>
+            <strong>- Carlos</strong>
+        </div>
 
-</div>
+    </div>
+</section>
 
-<!-- DEPOIMENTO 3 -->
-<div class="depoimentosCard">
+</main>
 
-<div class="before-after">
-<img src="skullgym/49107978-gordo-desleixado-homem-desenho-animado-desenhando-vetor.jpg">
-<img src="skullgym/85934449-happy-slim-man-loose-weight-in-flat-cartoon-illustration.jpg">
-</div>
-
-<div class="stars">★★★★☆</div>
-
-<p>"Resultados rápidos e acompanhamento top!"</p>
-
-</div>
-
-</div>
-</div>
-</div>
+<!-- FOOTER -->
 <footer>
 <p>© Skull Gym - Todos os direitos reservados</p>
 </footer>
 
-
+<!-- WHATSAPP -->
 <a class="whatsapp"
 href="https://wa.me/5528999166566?text=Quero saber mais">
 💬
 </a>
 
+<!-- SCRIPT MENU -->
+<script>
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+</script>
 
 </body>
 </html>
